@@ -33,21 +33,7 @@ export function EmailTemplate({ email }: EmailTemplateProps) {
 
             <!-- Footer with Social Links -->
             <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.2);">
-              <p style="color: #9ca3af; font-size: 14px; margin-bottom: 12px;">Follow us on social media:</p>
-              <div style="display: flex; justify-content: center; gap: 16px;">
-                <a href="https://twitter.com/nexiloop" style="text-decoration: none;">
-                  <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter" width="28">
-                </a>
-                <a href="https://instagram.com/nexilop" style="text-decoration: none;">
-                  <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" width="28">
-                </a>
-                <a href="https://youtube.com/nexiloop" style="text-decoration: none;">
-                  <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube" width="28">
-                </a>
-                <a href="https://tiktok.com/@nexiloop" style="text-decoration: none;">
-                  <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok" width="28">
-                </a>
-              </div>
+
               <p style="margin-top: 20px; color: #6b7280; font-size: 14px;">Need help? <a href="mailto:support@nexiloop.com" style="color: #9ca3af; text-decoration: none;">Contact Us</a></p>
               <p style="color: #9ca3af; font-size: 14px; margin-top: 8px;">&copy; 2024 Nexiloop. All rights reserved.</p>
             </div>
