@@ -25,11 +25,13 @@ const backgroundStyle = `
     position: fixed;
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0) 80%);
     border-radius: 50%;
     pointer-events: none;
     mix-blend-mode: screen;
     z-index: 3;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.9;
   }
 `
 
@@ -40,8 +42,9 @@ export default function Home() {
     document.body.appendChild(light);
 
     const moveLight = (e) => {
-      light.style.left = `${e.clientX - 50}px`;
-      light.style.top = `${e.clientY - 50}px`;
+      requestAnimationFrame(() => {
+        light.style.transform = `translate(${e.clientX - 50}px, ${e.clientY - 50}px)`;
+      });
     };
 
     window.addEventListener("mousemove", moveLight);
