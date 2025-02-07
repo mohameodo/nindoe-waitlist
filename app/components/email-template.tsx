@@ -11,8 +11,8 @@ export function EmailTemplate({ email }: EmailTemplateProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to Nexiloop!</title>
       </head>
-      <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #111827; color: white;">
-        <div style="width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 0; background: #111827;">
+      <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: none ; color: white;">
+        <div style="width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 0; background: none;">
           <div style="width: 100%; max-width: 600px; background: rgba(255, 255, 255, 0.1); padding: 32px; text-align: center; border-radius: 12px; backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
             
             <!-- Welcome Header -->
