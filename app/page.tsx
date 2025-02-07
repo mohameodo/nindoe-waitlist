@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react";
 import { WaitlistSignup } from "./components/waitlist-signup"
 import { Toaster } from "@/components/ui/toaster"
 
@@ -10,10 +11,7 @@ const backgroundStyle = `
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-color: black;
     pointer-events: none;
     z-index: 1;
   }
@@ -22,14 +20,43 @@ const backgroundStyle = `
     position: relative;
     z-index: 2;
   }
+
+  .light {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 3;
+  }
 `
 
 export default function Home() {
+  useEffect(() => {
+    const light = document.createElement("div");
+    light.classList.add("light");
+    document.body.appendChild(light);
+
+    const moveLight = (e) => {
+      light.style.left = `${e.clientX - 50}px`;
+      light.style.top = `${e.clientY - 50}px`;
+    };
+
+    window.addEventListener("mousemove", moveLight);
+
+    return () => {
+      window.removeEventListener("mousemove", moveLight);
+      document.body.removeChild(light);
+    };
+  }, []);
+
   return (
     <main
       className="min-h-screen flex items-center justify-center"
       style={{
-        background: "radial-gradient(circle at center, #1E40AF, #000000)",
+        background: "black",
       }}
     >
       <style jsx global>
@@ -53,4 +80,3 @@ export default function Home() {
     </main>
   )
 }
-
