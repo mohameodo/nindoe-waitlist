@@ -42,7 +42,7 @@ export default function Home() {
       <Toaster
         toastOptions={{
           style: {
-            background: "rgb(23 23 23)",
+            background: "rgb(0,0,0)",
             color: "white",
             border: "1px solid rgb(63 63 70)",
           },
